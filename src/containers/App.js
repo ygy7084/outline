@@ -1,27 +1,33 @@
 import React from 'react';
+
 import {
     BrowserRouter as Router,
     Route,
     Link
-} from 'react-router-dom';
+} from 'react-router-dom'
+//ReactRouter
+
+import createHistory from 'history/createBrowserHistory';
+const history = createHistory();
+//Save history so that refresh works well
 
 const Home = () => (
     <div>
         <h2>Home</h2>
     </div>
-)
+);
 
 const About = () => (
     <div>
         <h2>About</h2>
     </div>
-)
+);
 
 const Topic = ({ match }) => (
     <div>
         <h3>{match.params.topicId}</h3>
     </div>
-)
+);
 
 const Topics = ({ match }) => (
     <div>
@@ -29,12 +35,12 @@ const Topics = ({ match }) => (
         <ul>
             <li>
                 <Link to={`${match.url}/rendering`}>
-                    Rendering with React
+                    Renderieeng with Reactaa
                 </Link>
             </li>
             <li>
                 <Link to={`${match.url}/components`}>
-                    Components
+                    Componesnts
                 </Link>
             </li>
             <li>
@@ -49,10 +55,10 @@ const Topics = ({ match }) => (
             <h3>Please select a topic.</h3>
         )}/>
     </div>
-)
+);
 
 const BasicExample = () => (
-    <Router>
+    <Router history={history}>
         <div>
             <ul>
                 <li><Link to="/">Home</Link></li>
@@ -65,16 +71,15 @@ const BasicExample = () => (
             <Route exact path="/" component={Home}/>
             <Route path="/about" component={About}/>
             <Route path="/topics" component={Topics}/>
+            <Route path="*" component={Home}/>
         </div>
     </Router>
-)
+);
 
 class App extends React.Component {
     render() {
         return (
-            <div>
-                <BasicExample />
-            </div>
+            <BasicExample/>
         )
     }
 }

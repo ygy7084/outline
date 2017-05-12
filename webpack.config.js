@@ -2,8 +2,12 @@
 var { resolve } = require('path');
 var webpack = require('webpack');
 
-module.exports = {
+module.exports = [{
+    name : 'client side',
+
     context : resolve(__dirname, 'src'),
+    //default directory
+
     entry : [
         'react-hot-loader/patch',
         'webpack-dev-server/client?http://localhost:8080',
@@ -13,17 +17,25 @@ module.exports = {
         'react',
         'react-dom',
         './index.js'],
+    //what to webpack first
+
     output : {
         path: resolve(__dirname, 'public'),
         filename: 'bundle.js',
         publicPath: '/'
     },
+    //where to put bundle.js
+
     devtool: 'inline-source-map',
     devServer: {
         hot: true,
         contentBase: resolve(__dirname, 'public'),
-        publicPath: '/'
+        publicPath: '/',
+        historyApiFallback : true
+        //historyApiFallback -> only for devserver
     },
+    //for webpack-dev-server
+
     module: {
         loaders : [
             {
@@ -44,6 +56,8 @@ module.exports = {
             }
         ]
     },
+    //webpack modules
+
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         // enable HMR globally
@@ -51,4 +65,6 @@ module.exports = {
         new webpack.NamedModulesPlugin(),
         // prints more readable module names in the browser console on HMR updates
     ],
-};
+    //for webpack-dev-server and react-hot-loader
+}
+];

@@ -25,6 +25,7 @@
   "dependencies": {
     "babel-core": "^6.24.1",
     "express": "^4.15.2",
+    "history": "^4.6.1",
     "promise-polyfill": "^6.0.2",
     "react": "^15.5.4",
     "react-addons-update": "^15.5.2",
