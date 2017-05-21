@@ -1,13 +1,3 @@
-import React from 'react';
-
-class Home extends React.Component {
-    render() {
-        return (
-            <div style={{'color':'red'}}>
-                You knoaga
-            </div>
-        )
-    }
-}
-
-export default Home;
+/**
+ * Created by 1nept on 2017-05-18.
+ */
