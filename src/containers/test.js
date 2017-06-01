@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import menu from './test.scss'
 
 class Home extends React.Component {
     render(){
@@ -18,7 +17,7 @@ class Home extends React.Component {
                                     </a>
                                 </div>
                                 <span className='nav-toggle'>
-                                    <span/>
+                                    <span>sdfsd</span>
                                     <span/>
                                     <span/>
                                 </span>

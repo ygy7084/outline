@@ -6,6 +6,8 @@ if (!window.Promise) {
 import 'whatwg-fetch';
 // fetch explorer 호환
 
+import styles from './bulma.scss'
+//bulma load
 
 import { AppContainer } from 'react-hot-loader';
 // AppContainer is a necessary wrapper component for HMR

@@ -1,3 +1,12 @@
-/**
- * Created by 1nept on 2017-05-15.
- */
+import React from 'react';
+
+class Menu_Item extends React.Component {
+    constructor(props){
+        super(props);
+    }
+    render() {
+
+    }
+}
+
+export default Menu_Item;

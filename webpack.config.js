@@ -47,17 +47,26 @@ module.exports = [{
                 exclude:/node_modules/
             },
             {
-                test: /\.css$/,
-                loader : 'style!css-loader'
+                test: /\.scss$/, //sass or css
+                loader: 'style-loader!css-loader!sass-loader'
             },
             {
                 test: /\.(png|jpg|gif|woff|woff2|eot|ttf|svg)$/,
                 loader: 'url-loader?limit=100000'
+            },
+            {
+                test: /\.(glsl|frag|vert)$/,
+                loader: 'raw-loader',
+                exclude: /node_modules/
+            },
+            {
+                test: /\.(glsl|frag|vert)$/,
+                loader: 'glslify-loader',
+                exclude: /node_modules/
             }
         ]
     },
     //webpack modules
-
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         // enable HMR globally

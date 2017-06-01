@@ -1,7 +1,7 @@
 import React from 'react';
 import {MainList} from './';
 
-class Home extends React.Component {
+class Location extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -12,4 +12,4 @@ class Home extends React.Component {
     }
 }
 
-export default Home;
+export default Location;

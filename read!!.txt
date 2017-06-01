@@ -1,0 +1,4 @@
+glslify,
+glslify-loader,
+raw-loader
+-> plotly scatter3d
